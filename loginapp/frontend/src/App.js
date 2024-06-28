@@ -1,16 +1,26 @@
 import React from 'react'
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import './index.css'
 
+
+// routes root
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div>Root Routes</div>
+  },
+  {
+    path: '/register',
+    element: <div>Register Route</div>
+  }
+])
 const App = () => {
   return (
-    <>
-    <div className="bg-red-400">
-    <h1 className="text-3xl font-bold  text-cyan-800 ">
-    Hello world!
-  </h1>
-  </div>
-  <h2>hello</h2>
-  </>
+   <main>
+    <RouterProvider router={router}>
+      
+    </RouterProvider>
+   </main>
   )
 }
 
